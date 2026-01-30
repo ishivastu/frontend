@@ -5,7 +5,7 @@ const output = document.getElementById('result');
 
 button.addEventListener('click', async () => {
   try {
-    const response = await axios.get('/api/health');
+    const response = await axios.get('https://backend-mify.onrender.com/api/health');
     output.textContent = JSON.stringify(response.data, null, 2);
   } catch (error) {
     output.textContent = 'Error fetching data';
